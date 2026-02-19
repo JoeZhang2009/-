@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修行日記</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FBBF24'/><circle cx='50' cy='45' r='30' fill='%23FDE68A'/><path d='M35 45c2-2 6-2 8 0m14 0c2-2 6-2 8 0M45 55c2 2 8 2 10 0' stroke='%23451A03' stroke-width='2' stroke-linecap='round' fill='none'/></svg>">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --light-oak: #f4e4bc;
+            --medium-oak: #d2b48c;
+            --dark-oak: #8b7355;
+            --washi-white: #fdfdfa;
+            --accent-amber: #b45309;
+            --text-main: #4a3728;
+        }
+
+        body {
+            font-family: 'Noto+Sans+TC', sans-serif;
+            background-color: var(--light-oak);
+            color: var(--text-main);
+        }
+
+        .wood-texture {
+            background-color: #f4e4bc;
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png"); /* 細緻纖維質感 */
+        }
+
+        /* 滾動條美化 - 淺木色 */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(139, 115, 85, 0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 115, 85, 0.2);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 115, 85, 0.4);
+        }
+
+        /* 和紙卡片樣式 - 更明亮、輕盈 */
+        .paper-card {
+            background-color: var(--washi-white);
+            border: 1px solid rgba(210, 180, 140, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(139, 115, 85, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .oak-nav {
+            background: rgba(244, 228, 188, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="wood-texture">
+    <div id="root"></div>
+</body>
+</html>
